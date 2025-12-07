@@ -1,3 +1,13 @@
+/* Color Variables */
+:root {
+    --color-primary: #35281D;
+    --color-secondary: #FCD757;
+    --color-accent1: #63ADF2;
+    --color-accent2: #82A0BC;
+    --color-bg-section: #A7CCED;
+}
+
+/* Global Styles */
 * {
     box-sizing: border-box;
 }
@@ -5,15 +15,16 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #FCD757;
-    color: #35281D;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #35281D;
+    background-color: var(--color-primary);
     padding: 12px 24px;
 }
 
@@ -30,15 +41,16 @@ nav ul {
 }
 
 nav a {
-    color: #FCD757;
+    color: var(--color-secondary);
     font-weight: bold;
     text-decoration: none;
 }
 
 nav a:hover {
-    color: #63ADF2;
+    color: var(--color-accent1);
 }
 
+/* Main Area */
 main {
     display: flex;
     flex-wrap: wrap;
@@ -46,8 +58,9 @@ main {
     padding: 56px 40px;
 }
 
+/* Section Base Styles (shared for general sections) */
 section {
-    background-color: #A7CCED;
+    background-color: var(--color-bg-section);
     border-radius: 14px;
     padding: 22px;
     display: flex;
@@ -72,7 +85,7 @@ section p {
 section a {
     display: inline-block;
     margin-top: 10px;
-    background-color: #63ADF2;
+    background-color: var(--color-accent1);
     color: white;
     padding: 10px 14px;
     border-radius: 6px;
@@ -80,9 +93,31 @@ section a {
 }
 
 section a:hover {
-    background-color: #82A0BC;
+    background-color: var(--color-accent2);
 }
 
+.history-section {
+    width: 70%;
+    margin-left: auto;
+    flex-direction: reverse;
+}
+
+.history-section img {
+    width: 280px;
+}
+
+.about-section {
+    width: 70%;
+    margin-right: auto;
+    flex-direction: row-reverse;
+}
+
+.about-section img {
+    width: 280px;
+}
+
+
+/* Specific Sections for main page (why-banana, banana-image) */
 .why-banana-box, .banana-image-box {
     width: 45%;
 }
@@ -94,6 +129,7 @@ section a:hover {
 .banana-image-box {
     justify-content: center;
     animation: bananaSlideIn 1s ease-out;
+    background-color: transparent;
 }
 
 .banana-image-box img {
@@ -101,47 +137,31 @@ section a:hover {
 }
 
 @keyframes bananaSlideIn {
-    from {
-        transform: translateX(200px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    from { transform: translateX(200px); opacity: 0; }
+    to { transform: translateX(0px); opacity: 1; }
 }
 
-.history-section {
-    width: 70%;
-    margin-left: auto;
-    flex-direction: row-reverse;
-}
-
-.history-section img {
-    width: 280px;
-}
-
-.about-section {
-    width: 70%;
-    margin-right: auto;
-}
-
-.about-section img {
-    width: 280px;
-}
-
+/* Footer */
 footer {
-    background-color: #35281D;
-    color: #FCD757;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
     text-align: center;
     padding: 14px 0;
 }
 
 footer a {
-    color: #63ADF2;
+    color: var(--color-accent1);
     text-decoration: none;
 }
 
 footer a:hover {
-    color: #82A0BC;
+    color: var(--color-accent2);
 }
+
+/* ========================================== */
+/* HISTORY PAGE / SECTION STYLES (for history.html) */
+
+
+/* ========================================== */
+/* ABOUT PAGE / SECTION STYLES (for about.html) */
+
