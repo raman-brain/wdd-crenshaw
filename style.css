@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #FCD757;
+    color: #35281D;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #35281D;
+    padding: 12px 24px;
+}
+
+nav img {
+    height: 45px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #FCD757;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #63ADF2;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 56px 40px;
+}
+
+section {
+    background-color: #A7CCED;
+    border-radius: 14px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+section img {
+    border-radius: 10px;
+    width: 260px;
+}
+
+section h2 {
+    margin: 0 0 10px 0;
+}
+
+section p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+section a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #63ADF2;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+section a:hover {
+    background-color: #82A0BC;
+}
+
+.why-banana-box, .banana-image-box {
+    width: 45%;
+}
+
+.why-banana-box {
+    flex-direction: column;
+}
+
+.banana-image-box {
+    justify-content: center;
+    animation: bananaSlideIn 1s ease-out;
+}
+
+.banana-image-box img {
+    width: 320px;
+}
+
+@keyframes bananaSlideIn {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.history-section {
+    width: 70%;
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+
+.history-section img {
+    width: 280px;
+}
+
+.about-section {
+    width: 70%;
+    margin-right: auto;
+}
+
+.about-section img {
+    width: 280px;
+}
+
+footer {
+    background-color: #35281D;
+    color: #FCD757;
+    text-align: center;
+    padding: 14px 0;
+}
+
+footer a {
+    color: #63ADF2;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #82A0BC;
+}
