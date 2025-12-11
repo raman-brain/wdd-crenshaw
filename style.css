@@ -107,13 +107,27 @@ section a:hover {
 }
 
 .about-section {
-    width: 70%;
-    margin-right: auto;
-    flex-direction: row-reverse;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
 }
-
 .about-section img {
+    display:flex;
     width: 280px;
+    justify-content: left;
+}
+.about-section-text{
+    max-width: 600px;
+}
+.list-section {
+    border: 2px solid var(--color-primary);
+    background:rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    width: 100%;
+
 }
 
 
